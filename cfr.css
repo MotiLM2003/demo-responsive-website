@@ -1,0 +1,20 @@
+.form-group {
+  position: relative;
+}
+.form-group input + label {
+  color: red;
+  position: absolute;
+  left: 0.5rem;
+  top: 1rem;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.form-group input:focus + label {
+  top: -1.3rem;
+  left: 0;
+}
+.form-group input {
+  border-bottom: 1px solid #000;
+  width: 100%;
+}
