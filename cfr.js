@@ -7,7 +7,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     el.addEventListener('click', (click) => {
       // loop on childrens
       Array.from(el.children).forEach((child) => {
-        console.log(document.hasFocus(), child);
+        console.log('tests');
       });
     });
   });
