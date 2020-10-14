@@ -1,5 +1,6 @@
 :root {
   --color-fade: #b1a7a6;
+  --color-blue-1: #219ebc;
 }
 
 /* form group general */
@@ -92,7 +93,7 @@
   content: '';
   height: 100%;
   width: 100%;
-  border: 1px solid var(--color-fade);
+  border: 2px solid var(--color-blue-1);
   border-right: none;
   border-bottom: none;
   transition: height 0.5s linear, width 0.5s linear 0.5s;
@@ -111,7 +112,7 @@
 .animate-borders-focus:focus + label:after {
   height: 100%;
   width: 100%;
-  border: 1px solid var(--color-fade);
+  border: 2px solid var(--color-blue-1);
   border-left: none;
   border-top: none;
   transition: height 0.5s linear, width 0.5s linear 0.5s;
