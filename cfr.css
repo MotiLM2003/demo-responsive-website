@@ -2,13 +2,89 @@
   --color-fade: #b1a7a6;
 }
 
+/* form group general */
 .form-group {
   position: relative;
   margin-bottom: 2rem;
   display: flex;
   flex-direction: column;
 }
-.form-group input {
-  border-bottom: 1px solid var(--color-fade);
+/* form group inputs */
+.form-group input[type='text'] {
   width: calc(100% - 1rem);
+  position: relative;
+}
+
+.form-group label::before,
+.form-group label::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: 110px;
+  height: 10px;
+  border: 1px solid transparent;
+  animation: animate 1s linear reverse;
+}
+
+.form-group input:focus + label:before {
+  animation: animate 0.8s linear forwards;
+}
+
+@keyframes animate {
+  0% {
+    width: 0;
+    height: 0;
+    border-top-color: transparent;
+    border-right-color: var(--color-fade);
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+  50% {
+    width: 100%;
+    height: 0;
+    border-top-color: var(--color-fade);
+    border-right-color: var(--color-fade);
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+    border-top-color: var(--color-fade);
+    border-right-color: var(--color-fade);
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+}
+
+.form-group input:focus + label:after {
+  animation: animate2 0.8s linear forwards;
+}
+
+@keyframes animate2 {
+  0% {
+    width: 0;
+    height: 0;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: var(--color-fade);
+  }
+  50% {
+    width: 0;
+    height: 100%;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: var(--color-fade);
+    border-left-color: var(--color-fade);
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: var(--color-fade);
+    border-left-color: var(--color-fade);
+  }
 }
