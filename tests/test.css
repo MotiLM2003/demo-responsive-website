@@ -13,20 +13,19 @@ body {
 
 /*  TESTING ANIMATION AND REVERSE ANIMATION */
 
-.animate-reverse {
-  width: 320px;
-  font-size: 4rem;
+.animate-borders {
+  width: 23rem;
   color: #fff;
   font-family: Arial, Helvetica, sans-serif;
   background-color: transparent;
   padding: 1rem 2rem;
   position: relative;
   outline: none;
-
+  text-align: center;
   border: none;
 }
 
-.animate-reverse::before {
+.animate-borders::before {
   content: '';
   position: absolute;
   bottom: 0;
@@ -34,18 +33,18 @@ body {
   width: 0;
   height: 0;
   border: 8px solid transparent;
-  transition: height 0.5s linear, width 0.5s linear 0.5s;
 }
 
-.animate-reverse:hover:before {
+.animate-borders:hover:before {
   height: 100%;
-  width: 97.6%;
+  width: calc(100% - 40px);
   border: 8px solid #fff;
   border-right: none;
   border-bottom: none;
+  transition: height 0.5s linear, width 0.5s linear 0.5s;
 }
 
-.animate-reverse::after {
+.animate-borders::after {
   content: '';
   position: absolute;
   top: 0;
@@ -55,9 +54,9 @@ body {
   border: 8px solid transparent;
 }
 
-.animate-reverse:hover:after {
+.animate-borders:hover:after {
   height: 100%;
-  width: 97.6%;
+  width: calc(100% - 40px);
   border: 8px solid #fff;
   border-left: none;
   border-top: none;

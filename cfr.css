@@ -27,64 +27,54 @@
   animation: animate 1s linear reverse;
 }
 
-.form-group input:focus + label:before {
-  animation: animate 0.8s linear forwards;
+/***************** ANIMATE BORDER *****************/
+
+.animate-borders-hover {
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: transparent;
+  padding: 1rem;
+  position: relative;
+  outline: none;
+  text-align: center;
+  border: none;
 }
 
-@keyframes animate {
-  0% {
-    width: 0;
-    height: 0;
-    border-top-color: transparent;
-    border-right-color: var(--color-fade);
-    border-bottom-color: transparent;
-    border-left-color: transparent;
-  }
-  50% {
-    width: 100%;
-    height: 0;
-    border-top-color: var(--color-fade);
-    border-right-color: var(--color-fade);
-    border-bottom-color: transparent;
-    border-left-color: transparent;
-  }
-  100% {
-    width: 100%;
-    height: 100%;
-    border-top-color: var(--color-fade);
-    border-right-color: var(--color-fade);
-    border-bottom-color: transparent;
-    border-left-color: transparent;
-  }
+.animate-borders-hover::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border: 8px solid transparent;
 }
 
-.form-group input:focus + label:after {
-  animation: animate2 0.8s linear forwards;
+.animate-borders-hover:hover:before {
+  height: 100%;
+  width: calc(100%);
+  border: 1px solid var(--color-fade);
+  border-right: none;
+  border-bottom: none;
+  transition: height 0.5s linear, width 0.5s linear 0.5s;
 }
 
-@keyframes animate2 {
-  0% {
-    width: 0;
-    height: 0;
-    border-top-color: transparent;
-    border-right-color: transparent;
-    border-bottom-color: transparent;
-    border-left-color: var(--color-fade);
-  }
-  50% {
-    width: 0;
-    height: 100%;
-    border-top-color: transparent;
-    border-right-color: transparent;
-    border-bottom-color: var(--color-fade);
-    border-left-color: var(--color-fade);
-  }
-  100% {
-    width: 100%;
-    height: 100%;
-    border-top-color: transparent;
-    border-right-color: transparent;
-    border-bottom-color: var(--color-fade);
-    border-left-color: var(--color-fade);
-  }
+.animate-borders-hover::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border: 1px solid transparent;
 }
+.animate-borders-hover:hover:after {
+  height: 100%;
+  width: 100%;
+  border: 1px solid var(--color-fade);
+  border-left: none;
+  border-top: none;
+  transition: height 0.5s linear, width 0.5s linear 0.5s;
+}
+
+/***************** ANIMATE BORDER *****************/
