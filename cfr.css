@@ -15,18 +15,6 @@
   position: relative;
 }
 
-.form-group label::before,
-.form-group label::after {
-  content: '';
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  width: 110px;
-  height: 10px;
-  border: 1px solid transparent;
-  animation: animate 1s linear reverse;
-}
-
 /***************** ANIMATE BORDER *****************/
 
 .animate-borders-hover {
@@ -78,3 +66,55 @@
 }
 
 /***************** ANIMATE BORDER *****************/
+
+/***************** ANIMATE BORDER FOCUS ***********/
+.animate-borders-focus {
+  font-size: 4rem;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 1rem 2rem;
+  position: relative;
+  outline: none;
+  border: none;
+}
+
+.animate-borders-focus + label:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border: 8px solid transparent;
+}
+/* + .animate-borders-focus */
+
+.animate-borders-focus:focus + label:before {
+  content: '';
+  height: 100%;
+  width: 100%;
+  border: 1px solid var(--color-fade);
+  border-right: none;
+  border-bottom: none;
+  transition: height 0.5s linear, width 0.5s linear 0.5s;
+}
+
+.animate-borders-focus + label:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border: 8px solid transparent;
+}
+
+.animate-borders-focus:focus + label:after {
+  height: 100%;
+  width: 100%;
+  border: 1px solid var(--color-fade);
+  border-left: none;
+  border-top: none;
+  transition: height 0.5s linear, width 0.5s linear 0.5s;
+}
+
+/***************** ANIMATE BORDER FOCUS ***********/

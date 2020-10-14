@@ -2,6 +2,17 @@
   box-sizing: border-box;
 }
 
+p {
+  background-color: red;
+}
+
+h2 {
+  background-color: teal;
+}
+
+p + h2 {
+  background-color: yellow;
+}
 body {
   display: flex;
   justify-content: center;
@@ -12,20 +23,20 @@ body {
 }
 
 /*  TESTING ANIMATION AND REVERSE ANIMATION */
+.form-group {
+  position: relative;
+}
 
-.animate-borders {
-  width: 23rem;
-  color: #fff;
+.animate-borders-focus {
+  font-size: 4rem;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: transparent;
   padding: 1rem 2rem;
   position: relative;
   outline: none;
-  text-align: center;
   border: none;
 }
 
-.animate-borders::before {
+.animate-borders-focus + label:before {
   content: '';
   position: absolute;
   bottom: 0;
@@ -34,17 +45,19 @@ body {
   height: 0;
   border: 8px solid transparent;
 }
+/* + .animate-borders-focus */
 
-.animate-borders:hover:before {
+.animate-borders-focus:focus + label:before {
+  content: '';
   height: 100%;
   width: calc(100% - 40px);
-  border: 8px solid #fff;
+  border: 8px solid #000;
   border-right: none;
   border-bottom: none;
   transition: height 0.5s linear, width 0.5s linear 0.5s;
 }
 
-.animate-borders::after {
+.animate-borders-focus + label:after {
   content: '';
   position: absolute;
   top: 0;
@@ -54,10 +67,10 @@ body {
   border: 8px solid transparent;
 }
 
-.animate-borders:hover:after {
+.animate-borders-focus:focus + label:after {
   height: 100%;
   width: calc(100% - 40px);
-  border: 8px solid #fff;
+  border: 8px solid #000;
   border-left: none;
   border-top: none;
   transition: height 0.5s linear, width 0.5s linear 0.5s;
