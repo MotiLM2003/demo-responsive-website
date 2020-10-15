@@ -38,8 +38,13 @@ body {
 }
 
 .fa-search {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   color: #d9d9d9;
+}
+
+a:hover > .fa-search {
+  color: var(--yellow-1);
+  transition: linear 0.2s;
 }
 
 .search-container {
@@ -75,6 +80,9 @@ body {
   top: 11px;
   left: 0;
   width: 2.5rem;
+}
+.search-container .top-search {
+  border: none !important;
 }
 
 .ui-menu {
@@ -125,18 +133,6 @@ body {
 }
 
 /*****  GLOBAL ****/
-input[type='text'],
-input[type='search'] {
-  padding: 0.81rem;
-  border: none;
-  font-size: 1.6rem;
-  font-family: 'Raleway', sans-serif;
-  outline: none;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-  text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
-}
 
 .btn {
   padding: 1.5rem;
@@ -610,4 +606,33 @@ input[type='search'] {
   padding: 5rem;
 }
 
+#feedback .form-message {
+  border: 1px solid var(--color-fade) !important;
+  height: 16rem;
+}
+
+#feedback .feedback-information {
+  background-color: var(--yellow-1);
+  align-self: center;
+  margin-right: -3rem;
+  position: relative;
+  z-index: 10;
+  padding: 4rem 3rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.3rem;
+  max-width: 36rem;
+}
+
+#feedback .feedback-information h3 {
+  font-size: 2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-family: Oswald, sans-serif;
+}
+
+#feedback .feedback-information p {
+  font-size: 1.6rem;
+  font-style: italic;
+}
 /* FEEDBACK */

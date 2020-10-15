@@ -38,8 +38,13 @@ body {
 }
 
 .fa-search {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   color: #d9d9d9;
+}
+
+a:hover > .fa-search {
+  color: var(--yellow-1);
+  transition: linear 0.2s;
 }
 
 .search-container {
@@ -75,6 +80,9 @@ body {
   top: 11px;
   left: 0;
   width: 2.5rem;
+}
+.search-container .top-search {
+  border: none !important;
 }
 
 .ui-menu {
@@ -125,18 +133,6 @@ body {
 }
 
 /*****  GLOBAL ****/
-input[type='text'],
-input[type='search'] {
-  padding: 0.81rem;
-  border: none;
-  font-size: 1.6rem;
-  font-family: 'Raleway', sans-serif;
-  outline: none;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-  text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
-}
 
 .btn {
   padding: 1.5rem;
@@ -610,6 +606,35 @@ input[type='search'] {
   padding: 5rem;
 }
 
+#feedback .form-message {
+  border: 1px solid var(--color-fade) !important;
+  height: 16rem;
+}
+
+#feedback .feedback-information {
+  background-color: var(--yellow-1);
+  align-self: center;
+  margin-right: -3rem;
+  position: relative;
+  z-index: 10;
+  padding: 4rem 3rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.3rem;
+  max-width: 36rem;
+}
+
+#feedback .feedback-information h3 {
+  font-size: 2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-family: Oswald, sans-serif;
+}
+
+#feedback .feedback-information p {
+  font-size: 1.6rem;
+  font-style: italic;
+}
 /* FEEDBACK */
 
 :root {
@@ -617,6 +642,7 @@ input[type='search'] {
   --color-blue-1: #219ebc;
 }
 
+/*  FORMS GROUP ELEMENTS AND RULES */
 /* form group general */
 .form-group {
   position: relative;
@@ -624,13 +650,29 @@ input[type='search'] {
   display: flex;
   flex-direction: column;
 }
-/* form group inputs */
+/* form group inputs[text] */
 .form-group input[type='text'] {
-  width: calc(100% - 1rem);
+  width: calc(100%);
   position: relative;
+  outline: none;
 }
 
-/***************** ANIMATE BORDER *****************/
+input[type='text'],
+input[type='search'],
+textarea {
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  font-family: 'Raleway', sans-serif;
+  border: 1px solid var(--color-fade);
+  outline: none;
+}
+
+textarea {
+  border: 1px solid var(--color-fade);
+}
+
+/*  END OF FORMS GROUP ELEMENTS AND RULES */
+/***************** HOVER ANIMATE BORDER *****************/
 
 .animate-borders-hover {
   color: black;
@@ -680,16 +722,14 @@ input[type='search'] {
   transition: height 0.5s linear, width 0.5s linear 0.5s;
 }
 
-/***************** ANIMATE BORDER *****************/
+/***************** HOVER ANIMATE BORDER *****************/
 
-/***************** ANIMATE BORDER FOCUS ***********/
+/***************** FOCUS ANIMATE BORDER  ***********/
 .animate-borders-focus {
-  font-size: 4rem;
   font-family: Arial, Helvetica, sans-serif;
-  padding: 1rem 2rem;
+  padding: 1.5rem;
   position: relative;
   outline: none;
-  border: none;
 }
 
 .animate-borders-focus + label:before {
@@ -702,7 +742,6 @@ input[type='search'] {
   border: 0 solid var(--color-fade);
   transition: width 0.5s linear, height 0.5s 0.5s linear, border 1s linear;
 }
-/* + .animate-borders-focus */
 
 .animate-borders-focus:focus + label:before {
   content: '';
@@ -734,7 +773,7 @@ input[type='search'] {
   transition: height 0.5s linear, width 0.5s linear 0.5s;
 }
 
-/***************** ANIMATE BORDER FOCUS ***********/
+/***************** FOCUS ANIMATE BORDER FOCUS ***********/
 
 
 /*# sourceMappingURL=/z-website-1.e31bb0bc.css.map */
