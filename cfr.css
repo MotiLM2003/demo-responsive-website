@@ -1,6 +1,8 @@
 :root {
+  /* colors */
   --color-fade: #b1a7a6;
-  --color-blue-1: #219ebc;
+  --yellow-1: #219ebc;
+  --yellow-1: #f1c50e;
 }
 
 /*  FORMS GROUP ELEMENTS AND RULES */
@@ -108,7 +110,7 @@ textarea {
   content: '';
   height: 100%;
   width: 100%;
-  border: 2px solid var(--color-blue-1);
+  border: 2px solid var(--yellow-1);
   border-right: none;
   border-bottom: none;
   transition: height 0.5s linear, width 0.5s linear 0.5s;
@@ -128,10 +130,21 @@ textarea {
 .animate-borders-focus:focus + label:after {
   height: 100%;
   width: 100%;
-  border: 2px solid var(--color-blue-1);
+  border: 2px solid var(--yellow-1);
   border-left: none;
   border-top: none;
   transition: height 0.5s linear, width 0.5s linear 0.5s;
 }
 
 /***************** FOCUS ANIMATE BORDER FOCUS ***********/
+
+/*  ******************* BOX SHADOW **************** */
+
+.drop-shadow-1 {
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+}
+
+/*  ******************* BOX SHADOW **************** */
