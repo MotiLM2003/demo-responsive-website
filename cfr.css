@@ -85,7 +85,8 @@
   left: 0;
   width: 0;
   height: 0;
-  border: 8px solid transparent;
+  border: 0 solid var(--color-fade);
+  transition: width 0.5s linear, height 0.5s 0.5s linear, border 1s linear;
 }
 /* + .animate-borders-focus */
 
@@ -106,7 +107,8 @@
   right: 0;
   width: 0;
   height: 0;
-  border: 8px solid transparent;
+  border: 0 solid var(--color-fade);
+  transition: width 0.5s linear, height 0.5s 0.5s linear, border 1s linear;
 }
 
 .animate-borders-focus:focus + label:after {

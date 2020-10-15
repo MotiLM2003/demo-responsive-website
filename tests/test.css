@@ -1,77 +1,15 @@
-* {
-  box-sizing: border-box;
+.circle {
+  width: 100px;
+  height: 100px;
+  border: 30px solid black;
+  border-radius: 10rem;
+  background-color: transparent;
+  transition: all 1s ease;
 }
 
-p {
-  background-color: red;
-}
-
-h2 {
-  background-color: teal;
-}
-
-p + h2 {
-  background-color: yellow;
-}
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(to left, #e53935, #e35d5b);
-  width: 100vw;
-  height: 100vh;
-}
-
-/*  TESTING ANIMATION AND REVERSE ANIMATION */
-.form-group {
-  position: relative;
-}
-
-.animate-borders-focus {
-  font-size: 4rem;
-  font-family: Arial, Helvetica, sans-serif;
-  padding: 1rem 2rem;
-  position: relative;
-  outline: none;
-  border: none;
-}
-
-.animate-borders-focus + label:before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 0;
-  border: 8px solid transparent;
-}
-/* + .animate-borders-focus */
-
-.animate-borders-focus:focus + label:before {
-  content: '';
-  height: 100%;
-  width: calc(100% - 40px);
-  border: 8px solid #000;
-  border-right: none;
-  border-bottom: none;
-  transition: height 0.5s linear, width 0.5s linear 0.5s;
-}
-
-.animate-borders-focus + label:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 0;
-  height: 0;
-  border: 8px solid transparent;
-}
-
-.animate-borders-focus:focus + label:after {
-  height: 100%;
-  width: calc(100% - 40px);
-  border: 8px solid #000;
-  border-left: none;
-  border-top: none;
-  transition: height 0.5s linear, width 0.5s linear 0.5s;
+.circle:hover {
+  border: 2px solid black;
+  transition: border 1s ease-in-out;
+  width: 20px;
+  height: 20px;
 }
