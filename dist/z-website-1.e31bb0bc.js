@@ -118,7 +118,10 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"js.js":[function(require,module,exports) {
-
+// adding click event listener to the humburger;
+document.getElementsByClassName('humburger')[0].addEventListener('click', function () {
+  document.getElementsByClassName('mobile-menu')[0].classList.add('mobile-menu-off');
+});
 },{}],"node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
@@ -232,7 +235,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55978" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55740" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
