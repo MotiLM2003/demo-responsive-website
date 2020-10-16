@@ -188,5 +188,52 @@ textarea {
 /*  ******************* BOX SHADOW **************** */
 
 /*  HAMBURGER MENU ICON */
+#hamburger-menu-checkbox {
+  display: none;
+}
+.hamburger-menu {
+  user-select: none;
+  width: 25px;
+  border-top: 2px solid #fff;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  transition: border 0.2s linear;
+}
+
+.hamburger-menu::before,
+.hamburger-menu::after {
+  content: '';
+  display: block;
+  width: inherit;
+  border-top: 2px solid #fff;
+  position: absolute;
+  left: 0;
+
+  transform: opacity 0.5s linear;
+}
+.hamburger-menu::before {
+  top: 5.5px;
+  transition: transform 0.5s linear;
+}
+.hamburger-menu::after {
+  top: 13px;
+  transition: all 0.5s linear;
+}
+
+/*  changing hamburger  style based on checkbox 'checked' status  */
+input[type='checkbox']:checked + label {
+  border: 0px solid #fff;
+}
+input[type='checkbox']:checked + label::before {
+  top: 6px;
+  transform: rotate(-50deg);
+  width: 23px;
+}
+input[type='checkbox']:checked + label::after {
+  transform: rotate(50deg);
+  top: 6px;
+  width: 23px;
+}
 
 /*  HAMBURGER MENU ICON */
