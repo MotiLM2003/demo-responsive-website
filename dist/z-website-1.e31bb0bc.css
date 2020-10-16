@@ -26,7 +26,7 @@ ul li {
 :root {
   --gray-light-1: #d9d9d9;
   --gray-light-2: rgb(217, 217, 217, 0.2);
-  --yellow-1: #f1c50e;
+  --color-yellow-to-red-1: #f1c50e;
 }
 html {
   /* set font-size to 10px */
@@ -62,7 +62,7 @@ body {
 }
 
 a:hover > .fa-search {
-  color: var(--yellow-1);
+  color: var(--color-yellow-to-red-1);
   transition: linear 0.2s;
 }
 
@@ -138,7 +138,7 @@ a:hover > .fa-search {
   transition: all 0.3s ease-out;
 }
 .ui-menu li:hover::before {
-  background: var(--yellow-1);
+  background: var(--color-yellow-to-red-1);
   display: table;
   width: 40%;
   border-radius: 2rem;
@@ -183,7 +183,7 @@ a:hover > .fa-search {
 }
 
 .bg-yellow {
-  background-color: var(--yellow-1);
+  background-color: var(--color-yellow-to-red-1);
 }
 
 .no-border {
@@ -216,7 +216,7 @@ a:hover > .fa-search {
   /* background-color: red; */
 }
 .home-repair-text h1 {
-  color: var(--yellow-1);
+  color: var(--color-yellow-to-red-1);
   font-family: Oswald;
   font-size: 8.6rem;
   font-weight: 700;
@@ -295,13 +295,12 @@ a:hover > .fa-search {
   object-position: 96% 100%;
   background-position: 92% 100%;
   border-radius: 10rem;
-  box-shadow: 1rem -1rem rgba(241, 197, 17, 0.6),
-    2rem -2rem rgba(221, 186, 48, 0.6);
+  box-shadow: 0.5rem -0.5rem var(--color-yellow-to-red-3),
+    1.5rem -1.5rem var(--color-yellow-to-red-2);
 }
-
 /*  CAROUSEL CONTENT */
 .carousel_content {
-  background-color: var(--yellow-1);
+  background-color: var(--color-yellow-to-red-1);
   width: 100%;
   display: flex;
   justify-content: center;
@@ -327,7 +326,7 @@ a:hover > .fa-search {
 }
 
 .carousel_content .icon-content {
-  background-color: var(--yellow-1);
+  background-color: var(--color-yellow-to-red-1);
   width: 7.5rem;
   padding: 1.5rem;
   border-radius: 50%;
@@ -337,7 +336,7 @@ a:hover > .fa-search {
 }
 
 .carousel-item .header {
-  color: var(--yellow-1);
+  color: var(--color-yellow-to-red-1);
   font-family: Oswald;
   font-weight: 700;
   font-size: 2.2rem;
@@ -386,7 +385,7 @@ a:hover > .fa-search {
   padding: 5rem;
 }
 #help .help-info {
-  background-color: var(--yellow-1);
+  background-color: var(--color-yellow-to-red-1);
   min-height: 42rem;
   width: 40rem;
 
@@ -507,7 +506,7 @@ a:hover > .fa-search {
 }
 
 #services .services__header h2 {
-  color: var(--yellow-1);
+  color: var(--color-yellow-to-red-1);
   font-size: 4rem;
 }
 
@@ -524,7 +523,7 @@ a:hover > .fa-search {
 }
 
 #services .box-container-item h2 {
-  color: var(--yellow-1);
+  color: var(--color-yellow-to-red-1);
   text-transform: uppercase;
 }
 
@@ -542,15 +541,15 @@ a:hover > .fa-search {
   margin: 0 auto;
   padding: 1.7rem;
   width: 20rem;
-  border: 2px solid var(--yellow-1);
-  color: var(--yellow-1);
+  border: 2px solid var(--color-yellow-to-red-1);
+  color: var(--color-yellow-to-red-1);
   font-size: 1.5rem;
   text-transform: uppercase;
   letter-spacing: 0.3rem;
 }
 
 #services .btn-services:hover {
-  background-color: var(--yellow-1) !important;
+  background-color: var(--color-yellow-to-red-1) !important;
   color: #000;
   font-weight: 700;
 }
@@ -646,7 +645,7 @@ a:hover > .fa-search {
 }
 
 #feedback .feedback-information {
-  background-color: var(--yellow-1);
+  background-color: var(--color-yellow-to-red-1);
   align-self: center;
   margin-right: -10rem;
   position: relative;
@@ -702,7 +701,7 @@ a:hover > .fa-search {
 }
 
 #footer p a {
-  color: var(--yellow-1);
+  color: var(--color-yellow-to-red-1);
 }
 /* FOOTER  */
 
@@ -732,10 +731,48 @@ a:hover > .fa-search {
 }
 
 :root {
-  /* colors groups */
-  --color-fade: #b1a7a6;
-  --yellow-1: #219ebc;
-  --yellow-1: #f1c50e;
+  /* COLORS   PALETTES */
+
+  /* yellow/reddish palette */
+  --color-yellow-to-red-1: rgba(255, 186, 8, 1);
+  --color-yellow-to-red-2: rgba(250, 163, 7, 1);
+  --color-yellow-to-red-3: rgba(244, 140, 6, 1);
+  --color-yellow-to-red-4: rgba(232, 93, 4, 1);
+  --color-yellow-to-red-5: rgba(220, 47, 2, 1);
+  --color-yellow-to-red-6: rgba(208, 0, 0, 1);
+  --color-yellow-to-red-7: rgba(157, 2, 8, 1);
+  --color-yellow-to-red-8: rgba(106, 4, 15, 1);
+  --color-yellow-to-red-9: rgba(55, 6, 23, 1);
+  --color-yellow-to-red-10: rgba(3, 7, 30, 1);
+  /*  color blue shades  */
+  --color-blue-shades-1: rgba(202, 240, 248, 1);
+  --color-blue-shades-2: rgba(144, 224, 239, 1);
+  --color-blue-shades-3: rgba(0, 180, 216, 1);
+  --color-blue-shades-4: rgba(0, 119, 182, 1);
+  --color-blue-shades-5: rgba(3, 4, 94, 1);
+
+  /*  color white, gray shades  */
+  --color-gray-shades-1: rgba(255, 255, 255, 1);
+  --color-gray-shades-2: rgba(248, 249, 250, 1);
+  --color-gray-shades-3: rgba(233, 236, 239, 1);
+  --color-gray-shades-4: rgba(222, 226, 230, 1);
+  --color-gray-shades-5: rgba(206, 212, 218, 1);
+  --color-gray-shades-6: rgba(173, 181, 189, 1);
+  --color-gray-shades-7: rgba(108, 117, 125, 1);
+  --color-gray-shades-8: rgba(108, 117, 125, 1);
+  --color-gray-shades-10: rgba(33, 37, 41, 1);
+
+  /*  GREEN SHADES */
+  --color-green-shades-1: rgba(255, 255, 63, 1);
+  --color-green-shades-2: rgba(238, 239, 32, 1);
+  --color-green-shades-3: rgba(221, 223, 0, 1);
+  --color-green-shades-4: rgba(212, 215, 0, 1);
+  --color-green-shades-5: rgba(191, 210, 0, 1);
+  --color-green-shades-6: rgba(170, 204, 0, 1);
+  --color-green-shades-7: rgba(128, 185, 24, 1);
+  --color-green-shades-8: rgba(128, 185, 24, 1);
+  --color-green-shades-9: rgba(43, 147, 72, 1);
+  --color-green-shades-10: rgba(0, 127, 95, 1);
 }
 
 /*  FORMS GROUP ELEMENTS AND RULES */
@@ -843,7 +880,7 @@ textarea {
   content: '';
   height: 100%;
   width: 100%;
-  border: 2px solid var(--yellow-1);
+  border: 2px solid var(--color-yellow-to-red-1);
   border-right: none;
   border-bottom: none;
   transition: height 0.5s linear, width 0.5s linear 0.5s;
@@ -863,7 +900,7 @@ textarea {
 .animate-borders-focus:focus + label:after {
   height: 100%;
   width: 100%;
-  border: 2px solid var(--yellow-1);
+  border: 2px solid var(--color-yellow-to-red-1);
   border-left: none;
   border-top: none;
   transition: height 0.5s linear, width 0.5s linear 0.5s;
@@ -881,6 +918,10 @@ textarea {
 }
 
 /*  ******************* BOX SHADOW **************** */
+
+/*  HAMBURGER MENU ICON */
+
+/*  HAMBURGER MENU ICON */
 
 
 /*# sourceMappingURL=/z-website-1.e31bb0bc.css.map */
