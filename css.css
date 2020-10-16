@@ -1,32 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap');
-*,
-*::before,
-*::after {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
 
-a {
-  color: inherit;
-  font-family: inherit;
-  font-size: inherit;
-  text-decoration: none;
-}
-
-ul {
-  padding: 0;
-  margin: 0;
-}
-
-ul li {
-  list-style-type: none;
-}
 :root {
   --gray-light-1: #d9d9d9;
   --gray-light-2: rgb(217, 217, 217, 0.2);
-  --color-yellow-to-red-1: #f1c50e;
 }
 html {
   /* set font-size to 10px */
@@ -42,7 +19,7 @@ body {
   max-width: 120rem;
   margin: 0 auto;
   padding: 0 0.7rem;
-  min-width: 450px;
+  min-width: 360px;
 }
 
 .test:before {
@@ -269,10 +246,6 @@ a:hover > .fa-search {
     max-width: 100%;
   }
 
-  .home-repair-image .img-1 {
-    width: 10%;
-  }
-
   .home-repair-text .btn {
     margin: 2.5rem auto 4.5rem auto;
   }
@@ -291,12 +264,13 @@ a:hover > .fa-search {
 }
 
 .home-repair-image .img-1 {
-  width: 100%;
+  width: 86%;
   object-position: 96% 100%;
   background-position: 92% 100%;
   border-radius: 10rem;
   box-shadow: 0.5rem -0.5rem var(--color-yellow-to-red-3),
     1.5rem -1.5rem var(--color-yellow-to-red-2);
+  margin: 0 30px;
 }
 /*  CAROUSEL CONTENT */
 .carousel_content {
