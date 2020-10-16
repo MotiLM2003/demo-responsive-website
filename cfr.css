@@ -223,7 +223,9 @@ textarea {
   display: inline-block;
   position: relative;
   cursor: pointer;
-  transition: border 0.2s linear;
+  border-radius: 0%;
+
+  padding: 5px;
 }
 
 .hamburger-menu::before,
@@ -235,11 +237,11 @@ textarea {
   position: absolute;
   left: 0;
 
-  transform: opacity 0.5s linear;
+  transform: all 0.5s linear;
 }
 .hamburger-menu::before {
   top: 5.5px;
-  transition: transform 0.5s linear;
+  transition: all 0.5s linear;
 }
 .hamburger-menu::after {
   top: 13px;
@@ -248,17 +250,25 @@ textarea {
 
 /*  changing hamburger  style based on checkbox 'checked' status  */
 input[type='checkbox']:checked + label {
-  border: 0px solid #fff;
+  border: 3px solid var(--color-gray-shades-2);
+  width: 35px;
+  height: 35px;
+  background-color: transparent;
+  border-radius: 50%;
+  transition: border 0.2s linear;
 }
+
 input[type='checkbox']:checked + label::before {
-  top: 6px;
+  top: 13.5px;
+  left: 6.5px;
   transform: rotate(-50deg);
-  width: 23px;
+  width: 15px;
 }
 input[type='checkbox']:checked + label::after {
   transform: rotate(50deg);
-  top: 6px;
-  width: 23px;
+  top: 13.5px;
+  left: 6.5px;
+  width: 15px;
 }
 
 /*  HAMBURGER MENU ICON */

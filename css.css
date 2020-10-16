@@ -284,7 +284,7 @@ a:hover > .fa-search {
 }
 
 .carousel-item {
-  background-color: #fff;
+  background-color: --color-gray-shades-2;
   width: 28rem;
   height: 30rem;
   display: flex;
@@ -417,7 +417,7 @@ a:hover > .fa-search {
 #popular-services .img-container .img-item {
   width: 33rem;
   height: 35rem;
-  background-color: #fff;
+  background-color: --color-gray-shades-2;
   margin-right: 2rem;
   padding: 3rem;
   display: flex;
@@ -466,7 +466,7 @@ a:hover > .fa-search {
 }
 
 #services .services__header h1 {
-  color: #fff;
+  color: --color-gray-shades-2;
   font-size: 5rem;
 }
 
@@ -502,7 +502,7 @@ a:hover > .fa-search {
 }
 
 #services .box-container-item p {
-  color: #fff;
+  color: --color-gray-shades-2;
   padding: 2rem 0;
   line-height: 1.7em;
   font-style: italic;
@@ -530,7 +530,7 @@ a:hover > .fa-search {
 
 #about__us {
   height: 85vh;
-  background: linear-gradient(to right, #e5e5e5 50%, #fff 50%);
+  background: linear-gradient(to right, #e5e5e5 50%, --color-gray-shades-2 50%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -608,7 +608,7 @@ a:hover > .fa-search {
 
 #feedback .feedback-form-container {
   flex-basis: 60%;
-  background-color: #fff;
+  background-color: --color-gray-shades-2;
   border-radius: 0.2rem;
   padding: 5rem 5rem 5rem 13rem;
 }
@@ -671,7 +671,7 @@ a:hover > .fa-search {
 }
 
 #footer p {
-  color: #fff;
+  color: --color-gray-shades-2;
 }
 
 #footer p a {
@@ -681,7 +681,7 @@ a:hover > .fa-search {
 
 /*  mobile menu */
 .mobile-menu {
-  color: #fff;
+  color: --color-gray-shades-2;
   background-color: rgba(0, 0, 0, 0.85);
   overflow: hidden;
   right: 50%;
