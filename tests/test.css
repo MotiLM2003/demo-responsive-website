@@ -24,3 +24,7 @@ ul li {
 nav {
   background-color: var(--color-gray-shades-10);
 }
+
+.btn-test {
+  margin: 10rem;
+}
