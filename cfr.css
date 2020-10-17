@@ -233,7 +233,7 @@ textarea {
   content: '';
   display: block;
   width: inherit;
-  border-top: 2px solid #fff;
+  border-top: 2px solid #fff; /*  currentColor  - check this prorty*/
   position: absolute;
   left: 0;
 
