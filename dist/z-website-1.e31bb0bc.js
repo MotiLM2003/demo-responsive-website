@@ -118,9 +118,16 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"js.js":[function(require,module,exports) {
-// adding click event listener to the humburger;
-document.getElementsByClassName('humburger')[0].addEventListener('click', function () {
-  document.getElementsByClassName('mobile-menu')[0].classList.add('mobile-menu-off');
+var hamburgerCheckbox = document.getElementById('hamburger-menu-checkbox');
+hamburgerCheckbox.addEventListener('change', function (me) {
+  var isChecked = me.target.checked;
+  var mobileMenu = document.querySelector('.mobile-menu');
+
+  if (mobileMenu.classList.contains('mobile-menu-on')) {
+    mobileMenu.classList.remove('mobile-menu-on');
+  } else {
+    mobileMenu.classList.add('mobile-menu-on');
+  }
 });
 },{}],"node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;

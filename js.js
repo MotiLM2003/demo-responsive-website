@@ -1,9 +1,11 @@
-// adding click event listener to the humburger;
+const hamburgerCheckbox = document.getElementById('hamburger-menu-checkbox');
 
-document
-  .getElementsByClassName('humburger')[0]
-  .addEventListener('click', () => {
-    document
-      .getElementsByClassName('mobile-menu')[0]
-      .classList.add('mobile-menu-off');
-  });
+hamburgerCheckbox.addEventListener('change', (me) => {
+  const isChecked = me.target.checked;
+  const mobileMenu = document.querySelector('.mobile-menu');
+  if (mobileMenu.classList.contains('mobile-menu-on')) {
+    mobileMenu.classList.remove('mobile-menu-on');
+  } else {
+    mobileMenu.classList.add('mobile-menu-on');
+  }
+});
