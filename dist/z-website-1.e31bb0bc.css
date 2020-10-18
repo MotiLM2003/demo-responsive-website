@@ -59,10 +59,15 @@ a:hover > .fa-search {
 
 .humburger {
   margin-top: 1rem;
+  display: none;
 }
 
 .search-container .top-search {
   border: none !important;
+}
+
+.hamburger {
+  display: none;
 }
 
 .ui-menu {
@@ -685,6 +690,9 @@ a:hover > .fa-search {
   display: block;
 }
 
+.mobile-menu .close-mobile-menu {
+  cursor: pointer;
+}
 /*  * MEDIA QUERIES */
 
 @media screen and (max-width: 1199px) {
