@@ -5,7 +5,9 @@ const mobileMenu = document.querySelector('.mobile-menu');
 document
   .querySelector('.mobile-menu, .close-mobile-menu')
   .addEventListener('click', () => {
-    mobileMenu.classList.remove('mobile-menu-on');
+    const event = new Event('change');
+    hamburgerCheckbox.checked = false;
+    hamburgerCheckbox.dispatchEvent(event);
   });
 
 // opening/closing mobile menu.

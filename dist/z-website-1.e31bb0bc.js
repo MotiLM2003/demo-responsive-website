@@ -122,7 +122,9 @@ var hamburgerCheckbox = document.getElementById('hamburger-menu-checkbox');
 var mobileMenu = document.querySelector('.mobile-menu'); // removing mobile menu on  background click
 
 document.querySelector('.mobile-menu, .close-mobile-menu').addEventListener('click', function () {
-  mobileMenu.classList.remove('mobile-menu-on');
+  var event = new Event('change');
+  hamburgerCheckbox.checked = false;
+  hamburgerCheckbox.dispatchEvent(event);
 }); // opening/closing mobile menu.
 
 hamburgerCheckbox.addEventListener('change', function (me) {
