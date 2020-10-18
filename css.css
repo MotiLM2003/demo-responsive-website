@@ -56,31 +56,11 @@ a:hover > .fa-search {
   position: absolute;
   right: 0;
 }
+
 .humburger {
-  border-top: 3px solid rgb(49, 49, 49);
-  width: 2.5rem;
-  height: 2rem;
-  cursor: pointer;
-  z-index: 11;
-  position: relative;
+  margin-top: 1rem;
 }
 
-.humburger::before {
-  content: '';
-  position: absolute;
-  border-top: inherit;
-  top: 4px;
-  left: 0;
-  width: 2.5rem;
-}
-.humburger::after {
-  content: '';
-  position: absolute;
-  border-top: inherit;
-  top: 11px;
-  left: 0;
-  width: 2.5rem;
-}
 .search-container .top-search {
   border: none !important;
 }

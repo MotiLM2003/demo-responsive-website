@@ -4,6 +4,15 @@
   box-sizing: border-box;
 }
 
+body {
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 8rem;
+}
+
 nav {
   min-height: 5rem;
   display: flex;
